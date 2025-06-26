@@ -44,7 +44,7 @@ func main() {
 
 ### Prerequisites
 
-- Go 1.21 or later
+- Go 1.22.5 or later
 - [oapi-codegen](https://github.com/oapi-codegen/oapi-codegen) v2
 
 ### Generating the Code
