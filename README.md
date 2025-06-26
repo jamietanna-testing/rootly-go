@@ -53,8 +53,6 @@ func main() {
 2. **Generate Go code**: `make gen`
 3. **Complete workflow**: `make fetch-spec gen`
 
-After generation, manually remove any duplicate definitions from `schema.gen.go` using your IDE's Go extension.
-
 ### Building and Testing
 
 - **Build**: `make build` or `go build ./...`
