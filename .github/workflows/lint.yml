@@ -7,42 +7,27 @@ on:
 jobs:
   golangci:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        version:
-        - "1.21"
-        - "1.22"
-        - "1.23"
-        - "1.24"
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-      - name: Set up Go 1.x
-        uses: actions/setup-go@v4
+      - name: Set up Go
+        uses: actions/setup-go@v5
         with:
-          go-version: ${{ matrix.version }}
-        id: go
+          go-version-file: go.mod
       - name: Run Golangci Linter
-        uses: golangci/golangci-lint-action@v3
+        uses: golangci/golangci-lint-action@v6
         with:
           version: latest
+          args: --timeout=5m
   gomod:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        version:
-        - "1.21"
-        - "1.22"
-        - "1.23"
-        - "1.24"
     steps:
-      - name: Set up Go 1.x
-        uses: actions/setup-go@v4
-        with:
-          go-version: ${{ matrix.version }}
-        id: go
       - name: Checkout Repository
         uses: actions/checkout@v4
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
       - run: |
           go mod tidy
           git diff --exit-code go.mod
@@ -54,21 +39,13 @@ jobs:
           git diff --exit-code go.sum
   generate:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        version:
-        - "1.21"
-        - "1.22"
-        - "1.23"
-        - "1.24"
     steps:
-      - name: Set up Go 1.x
-        uses: actions/setup-go@v4
-        with:
-          go-version: ${{ matrix.version }}
-        id: go
       - name: Checkout Repository
         uses: actions/checkout@v4
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
       - run: |
           make gen
           git diff --exit-code
