@@ -48,6 +48,5 @@ jobs:
         with:
           go-version-file: go.mod
       - run: |
-          make fetch-spec
           make gen
           git diff --exit-code
