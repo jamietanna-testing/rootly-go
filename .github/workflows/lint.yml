@@ -37,6 +37,7 @@ jobs:
           go mod tidy
           git diff --exit-code go.mod
           git diff --exit-code go.sum
+
   generate:
     runs-on: ubuntu-latest
     steps:
