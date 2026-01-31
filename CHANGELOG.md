@@ -5,19 +5,35 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v0.5.0] - 2016-01-15
+## [v0.6.0] - 2026-01-31
 
 ### Added
 
-- Added `Meta` struct for pagination support 
-- Added `ISNOT` condition for workflow tasks via SDK.
+- Add Catalog Fields API endpoints for managing custom catalog fields:
+  - Causes: `ListCauseCatalogFields`, `CreateCauseCatalogField`
+  - Environments: `ListEnvironmentCatalogFields`, `CreateEnvironmentCatalogField`
+  - Functionalities: `ListFunctionalityCatalogFields`, `CreateFunctionalityCatalogField`
+  - Incident Types: `ListIncidentTypeCatalogFields`, `CreateIncidentTypeCatalogField`
+  - Services: `ListServiceCatalogFields`, `CreateServiceCatalogField`
+  - Groups: `ListGroupCatalogFields`, `CreateGroupCatalogField`
+- Add `AlertPayloadConditions` to `AlertTriggerParams` for advanced alert filtering with operators (IS, IS NOT, CONTAINS, CONTAINS_ALL, CONTAINS_NONE, SET, UNSET, ANY, NONE)
+- Add `UserNotificationRuleNotificationType` (audible/quiet) for notification preferences
+- Add `CommunicationsTemplateCommunicationTemplateStages` for template stage management
+- Add `Slug` field to various types for identifier support
+- Add `JsmopsId` field to User type for Jira Service Management integration
 
+## [v0.5.0] - 2026-01-15
 
-### Fixed 
+### Added
 
-- Fixed `Shift` struct for correct response type 
-- Fixed required and optional types for Dashboard Params. 
-- Fixed LCR required and optional params.
+- Add `Meta` struct for pagination support
+- Add `ISNOT` condition for workflow tasks via SDK
+
+### Fixed
+
+- Fix `Shift` struct for correct response type
+- Fix required and optional types for Dashboard Params
+- Fix LCR required and optional params
 
 ## [Unreleased]
 
@@ -87,7 +103,9 @@ Initial development from February 2021 to April 2025:
 - MIT License
 - Multiple schema updates and dependency upgrades
 
-[Unreleased]: https://github.com/rootlyhq/rootly-go/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/rootlyhq/rootly-go/compare/v0.6.0...HEAD
+[v0.6.0]: https://github.com/rootlyhq/rootly-go/compare/v0.5.0...v0.6.0
+[v0.5.0]: https://github.com/rootlyhq/rootly-go/compare/v0.4.0...v0.5.0
 [v0.4.0]: https://github.com/rootlyhq/rootly-go/compare/v0.3.0...v0.4.0
 [v0.3.0]: https://github.com/rootlyhq/rootly-go/compare/v0.2.0...v0.3.0
 [v0.2.0]: https://github.com/rootlyhq/rootly-go/compare/v0.1.0...v0.2.0
