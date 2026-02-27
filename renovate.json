@@ -27,6 +27,22 @@
       ],
       "dependencyDashboardApproval": true,
       "groupName": "go-directive"
+    },
+    {
+      "description": "Run `go generate` after updating the OpenAPI spec",
+      "matchManagers": [
+        "vendir"
+      ],
+      "matchUpdateTypes": [
+        "lockFileMaintenance"
+      ],
+      "postUpgradeTasks": {
+        "commands": [
+          "go generate ./..."
+        ],
+        "fileFilters": [],
+        "executionMode": "update"
+      }
     }
   ],
   "postUpdateOptions": [
