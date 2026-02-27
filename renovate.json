@@ -45,5 +45,20 @@
       "depNameTemplate": "github.com/oapi-codegen/oapi-codegen/v2",
       "datasourceTemplate": "go"
     }
-  ]
+  ],
+  "vendir": {
+    "lockFileMaintenance": {
+      "enabled": true,
+      "recreateWhen": "always",
+      "rebaseStalePrs": true,
+      "branchTopic": "vendir-openapi-sync",
+      "commitMessageAction": "update vendored OpenAPI spec",
+      "schedule": [
+        "at any time"
+      ],
+      "prBodyDefinitions": {
+        "Change": "Updated OpenAPI spec"
+      }
+    }
+  }
 }
