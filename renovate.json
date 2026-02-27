@@ -73,6 +73,7 @@
         "at any time"
       ],
       "prBodyDefinitions": {
+        "Update": "",
         "Change": "Updated OpenAPI spec"
       }
     }
