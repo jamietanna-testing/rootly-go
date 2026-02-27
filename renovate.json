@@ -40,7 +40,9 @@
         "commands": [
           "go generate ./..."
         ],
-        "fileFilters": [],
+        "fileFilters": [
+          "**/*.gen.go"
+        ],
         "executionMode": "update"
       }
     }
