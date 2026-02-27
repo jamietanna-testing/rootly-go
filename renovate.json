@@ -74,8 +74,9 @@
       ],
       "prBodyDefinitions": {
         "Update": "",
-        "Change": "Updated OpenAPI spec"
-      }
+        "Change": ""
+      },
+      "prHeader": ""
     }
   }
 }
