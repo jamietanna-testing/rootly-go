@@ -67,8 +67,6 @@
   "vendir": {
     "lockFileMaintenance": {
       "enabled": true,
-      "recreateWhen": "always",
-      "rebaseStalePrs": true,
       "branchTopic": "vendir-openapi-sync",
       "commitMessageAction": "update vendored OpenAPI spec",
       "schedule": [
