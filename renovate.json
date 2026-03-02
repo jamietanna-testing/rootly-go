@@ -58,7 +58,10 @@
         "fileFilters": [
           "**/*.gen.go"
         ],
-        "executionMode": "update"
+        "executionMode": "update",
+        "installTools": {
+          "golang": {}
+        }
       }
     }
   ],
