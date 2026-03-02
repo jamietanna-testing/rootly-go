@@ -41,7 +41,7 @@
           "go generate ./..."
         ],
         "fileFilters": [
-          "**/*.gen.go"
+          "**/*.gen.go", ".vendored/rootly-api/swagger.json"
         ],
         "executionMode": "update",
         "installTools": {
